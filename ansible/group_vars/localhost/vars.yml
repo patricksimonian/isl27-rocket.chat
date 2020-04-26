@@ -1,7 +1,0 @@
----
-project_name: rocket-chat
-namespaces:
-  - dev
-  - test
-  - prod
-  
