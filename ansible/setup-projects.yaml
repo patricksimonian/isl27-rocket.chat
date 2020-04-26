@@ -3,4 +3,4 @@
     tasks:
       - name: create projects
         loop: "{{ namespaces }}"
-        command: "oc create-project {{ project_name }}-{{ item }} --display-name='Rocket.Chat ({{ item }})'"
+        command: "oc new-project {{ project_name }}-{{ item }} --display-name='Rocket.Chat ({{ item }})'"
