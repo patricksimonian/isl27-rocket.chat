@@ -7,7 +7,8 @@ spec:
   serviceName: mongo
   replicas: 3
   selector: 
-    replicaset: MainRepSet
+    matchLabels:
+      replicaset: MainRepSet
   template:
     metadata:
       labels:
