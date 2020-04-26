@@ -1,0 +1,15 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  creationTimestamp: null
+  name: mongo-replication-helper
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - name: v1
+      from: 
+        kind: DockerImage
+        name: cvallance/mongo-k8s-sidecar
+status:
+  dockerImageRepository: ""
