@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo
-  namespace: mongo
+  namespace: rocket-chat-dev
 spec:
   serviceName: mongo
   replicas: 3
@@ -55,7 +55,7 @@ spec:
             - name: MONGO_SIDECAR_POD_LABELS
               value: "role=mongo,environment=staging"
             - name: KUBE_NAMESPACE
-              value: "mongo"
+              value: "rocket-chat-dev"
             - name: KUBERNETES_MONGO_SERVICE_NAME
               value: "mongo"
   volumeClaimTemplates:
