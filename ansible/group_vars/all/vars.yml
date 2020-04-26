@@ -4,4 +4,6 @@ namespaces:
   - dev
   - test
   - prod
-  
+openshift_dir: ../.openshift
+templates:
+  rocketchat: rocket-chat-persistent.yaml
