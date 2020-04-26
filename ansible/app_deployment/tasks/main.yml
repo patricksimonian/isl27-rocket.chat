@@ -1,4 +1,4 @@
 ---
 # tasks file for app_deployment
 - name: process and apply rc to dev
-  command: "oc process -f {{ openshift_dir }}/{{ templates.rocketchat }} | oc apply -f - -n {{ project_name }}-{{ deployment_env }}"
+  shell: "oc process -f {{ openshift_dir }}/{{ templates.rocketchat }} | oc apply -f - -n {{ project_name }}-{{ deployment_env }}"
