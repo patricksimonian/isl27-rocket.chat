@@ -6,6 +6,8 @@ metadata:
 spec:
   serviceName: mongo
   replicas: 3
+  selector: 
+    replicaset: MainRepSet
   template:
     metadata:
       labels:
