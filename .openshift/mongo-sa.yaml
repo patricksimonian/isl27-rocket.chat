@@ -12,3 +12,12 @@ subjects:
 - kind: ServiceAccount
   name: mongo-sa
   namespace: default
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2020-04-27T00:28:17Z"
+  name: mongo-sa
+  namespace: rocket-chat-dev
