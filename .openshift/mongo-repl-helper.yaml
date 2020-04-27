@@ -10,6 +10,6 @@ spec:
     - name: v1
       from: 
         kind: DockerImage
-        name: cvallance/mongo-k8s-sidecar
+        name: registry.hub.docker.com/library/cvallance/mongo-k8s-sidecar
 status:
   dockerImageRepository: ""
