@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo
+  labels:
+    app: mongo
   namespace: rocket-chat-dev
 spec:
   serviceName: mongo
@@ -12,6 +14,7 @@ spec:
   template:
     metadata:
       labels:
+        app: mongo
         role: mongo
         environment: staging
         replicaset: MainRepSet
@@ -64,6 +67,8 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: mongo-persistent-storage
+      labels:
+        app: mongo
       # annotations:
       #   volume.beta.kubernetes.io/storage-class: "fast"
     spec:
