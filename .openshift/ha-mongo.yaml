@@ -32,10 +32,10 @@ spec:
                   - MainRepSet
               topologyKey: kubernetes.io/hostname
       terminationGracePeriodSeconds: 10
-      serviceAccountName: mongo
+      serviceAccountName: mongo-sa
       containers:
         - name: mongo
-          image: mongo
+          image: mongo:4.2
           command:
             - mongod
             - "--wiredTigerCacheSizeGB"
@@ -44,8 +44,6 @@ spec:
             - "0.0.0.0"
             - "--replSet"
             - MainRepSet
-            - "--smallfiles"
-            - "--noprealloc"
           ports:
             - containerPort: 27017
           volumeMounts:
